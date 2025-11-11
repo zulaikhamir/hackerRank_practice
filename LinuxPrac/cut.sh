@@ -14,3 +14,80 @@ cut -c 3
 # -k 2,3 means extract the 2nd and 3rd fields from each line.
 # -k 2.3 means extract the 2nd and 3rd characters from each line.
 # -k 2.3 means extract the 2nd and 3rd characters from each line.
+
+
+# Display the 2nd  and  7th character from each line of text.
+cut -c 2,7
+
+
+# Display a range of characters starting at the  position of a string and ending at the  position (both positions included).
+cut -c 2-7
+
+
+# Display the first four characters from each line of text.
+cut -c 1-4
+
+
+# Given a tab delimited file with several columns (tsv format) print the first three fields.
+cut -d $'\t' -f 1-3
+cut -f 1-3
+
+
+cut -d $'\t' -f 1-3
+# -d $'\t' explicitly defines TAB as the delimiter
+# This is required when your file may have custom or mixed delimiters
+# Guaranteed, explicit, no-ambiguity field extraction
+
+
+cut -f 1-3
+# -f selects fields
+# No -d means: cut assumes TAB as the default delimiter
+# Works automatically for proper TSV files
+
+
+# Print the characters from thirteenth position to the end.
+cut -c 13-
+
+# Given a sentence, identify and display its fourth word. Assume that the space (' ') is the only delimiter between words
+cut -d ' ' -f 4
+
+# -d ' ' explicitly defines space as the delimiter
+# -f 4 means extract the 4th field from each line
+# Works for sentences with standard spaces
+
+
+# Given a sentence, identify and display its first three words. Assume that the space (' ') is the only delimiter between words
+cut -d ' ' -f 1-3
+
+# -d ' ' explicitly defines space as the delimiter
+# -f 1-3 means extract the 1st, 2nd, and 3rd fields from each line
+# Works for sentences with standard spaces
+
+# Given a sentence, identify and display its first three words. Assume that the space (' ') is the only delimiter between words.
+cut -d ' ' -f 1-3
+
+# -d ' ' explicitly defines space as the delimiter
+# -f 1-3 means extract the 1st, 2nd, and 3rd fields from each line
+# Works for sentences with standard spaces
+
+# Given a sentence, identify and display its first three words. Assume that the space (' ') is the only delimiter between words.
+cut -d ' ' -f 1-3
+
+# -d ' ' explicitly defines space as the delimiter
+# -f 1-3 means extract the 1st, 2nd, and 3rd fields from each line
+# Works for sentences with standard spaces
+# Given a tab delimited file with several columns (tsv format) print the fields from second fields to last field.
+cut -d $'\t' -f 2-
+
+# -d $'\t' explicitly defines TAB as the delimiter
+# -f 2- means extract the 2nd field to the last field from each line
+# Works for tsv files with standard tabs
+
+# Given a tab delimited file with several columns (tsv format) print the fields from second fields to last field.
+cut -d $'\t' -f 2-
+or
+cut -f 2- because cut assumes TAB as the default delimiter for tsv files
+
+# -d $'\t' explicitly defines TAB as the delimiter
+# -f 2- means extract the 2nd field to the last field from each line
+# Works for tsv files with standard tabs
